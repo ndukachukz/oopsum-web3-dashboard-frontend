@@ -1,6 +1,9 @@
 import tether from "@/assets/images/Tether.png";
 import uniswap from "@/assets/images/Uniswap.png";
 import wazirx from "@/assets/images/WazirX.png";
+import compoundLogo from "@/assets/images/CompoundBadge.png";
+import shibaInuLogo from "@/assets/images/shiba-inu-logo.png";
+import thetaFuelLogo from "@/assets/images/theta-fuel-tfuel-logo.png";
 
 import { CryptoDashboard } from "@/types";
 
@@ -75,8 +78,7 @@ export const dashboard_data: CryptoDashboard = {
         priceChange: 8250,
         timeFrame: "All time",
         direction: "up",
-        image:
-          "https://assets.coingecko.com/coins/images/10775/small/compound.png",
+        image: compoundLogo,
       },
       {
         name: "Shibainu",
@@ -85,8 +87,7 @@ export const dashboard_data: CryptoDashboard = {
         priceChange: 660910,
         timeFrame: "All time",
         direction: "up",
-        image:
-          "https://assets.coingecko.com/coins/images/11939/small/shiba.png",
+        image: shibaInuLogo,
       },
       {
         name: "ThetaFuel",
@@ -95,7 +96,7 @@ export const dashboard_data: CryptoDashboard = {
         priceChange: 151,
         timeFrame: "All time",
         direction: "down",
-        image: "https://assets.coingecko.com/coins/images/8029/small/tfuel.png",
+        image: thetaFuelLogo,
       },
     ],
   },

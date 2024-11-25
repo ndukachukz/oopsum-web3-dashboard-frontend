@@ -11,6 +11,8 @@ export default {
       },
       colors: {
         "light-green": "#77ED91",
+        "price-positive": "#2DC24E",
+        "price-negetive": "#F92C2C",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

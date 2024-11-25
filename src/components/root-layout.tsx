@@ -48,7 +48,7 @@ const RootLayout = () => {
                 </Avatar>
 
                 <div className="flex items-center gap-x-2">
-                  <p className="text-base hidden md:block">FirstName</p>
+                  <p className="text-base hidden md:block">John</p>
                   <ArrowDown2 size="14" color="#FFF" />
                 </div>
               </div>

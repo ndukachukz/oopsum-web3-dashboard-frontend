@@ -1,10 +1,19 @@
-import { StrictMode } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "@/components/root-layout";
-import Dashboard from "./pages/dashboard";
+
+const RootLayout = React.lazy(() => import("@/components/root-layout"));
+
+const Dashboard = React.lazy(() => import("@/pages/dashboard"));
+const Portfolio = React.lazy(() => import("@/pages/portfolio"));
+const Trading = React.lazy(() => import("@/pages/trading"));
+const Watchlist = React.lazy(() => import("@/pages/watchlist"));
+const Academy = React.lazy(() => import("@/pages/academy"));
+const Profile = React.lazy(() => import("@/pages/profile"));
+const Wallet = React.lazy(() => import("@/pages/wallet"));
 
 const router = createBrowserRouter([
   {
@@ -18,27 +27,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/portfolio",
-        element: <Dashboard />,
+        element: <Portfolio />,
       },
       {
         path: "/trading",
-        element: <Dashboard />,
+        element: <Trading />,
       },
       {
         path: "/watchlist",
-        element: <Dashboard />,
+        element: <Watchlist />,
       },
       {
         path: "/academy",
-        element: <Dashboard />,
+        element: <Academy />,
       },
       {
         path: "/profile",
-        element: <Dashboard />,
+        element: <Profile />,
       },
       {
         path: "/wallet",
-        element: <Dashboard />,
+        element: <Wallet />,
       },
     ],
   },
