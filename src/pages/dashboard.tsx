@@ -7,6 +7,7 @@ import { dashboard_data } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { RecentlyAddedCoin, TrendingCoin } from "@/types";
 import { chartConfig } from "@/lib/config";
+import { useSidebar } from "@/components/ui/sidebar";
 
 const chartData = [
   { month: "January", desktop: 186 },
@@ -108,6 +109,8 @@ const TrendingSectionCard = ({
 };
 
 function Dashboard() {
+  const { state } = useSidebar();
+
   return (
     <div className="flex flex-1 flex-col gap-x-[18px] p-4 space-y-9">
       <section className="space-y-5 ">
@@ -146,7 +149,14 @@ function Dashboard() {
           </Button>
         </div>
 
-        <div className="flex space-x-[10px] snap-x overflow-x-scroll no-scrollbar max-sm:max-w-screen-sm ">
+        <div
+          className={cn(
+            "flex space-x-[10px] snap-x overflow-x-scroll no-scrollbar",
+            state === "collapsed"
+              ? "max-w-[calc(100% - var(--sidebar-width-icon))]"
+              : " max-w-[calc(100% - var(--sidebar-width))]"
+          )}
+        >
           {dashboard_data.topCoins.coins.map((coin) => (
             <div
               key={coin.symbol}
